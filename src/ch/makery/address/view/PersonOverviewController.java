@@ -96,7 +96,7 @@ public class PersonOverviewController {
         if (selectedIndex >= 0) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation");
-            alert.setHeaderText("Are you sure you want to delete this person?");
+            alert.setHeaderText("Are you sure you want to delete " + firstNameLabel.getText() + " " + lastNameLabel.getText()+" ?");
             alert.setContentText("This action cannot be undone!");
 
             Optional<ButtonType> result = alert.showAndWait();
