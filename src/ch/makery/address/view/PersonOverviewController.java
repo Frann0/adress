@@ -82,6 +82,7 @@ public class PersonOverviewController {
 
             birthdayLabel.setText(DateUtil.format(person.getBirthday()));
             socialSecurityLabel.setText(person.getSocialSecurity());
+            System.out.println(person.calculateAge() + " Years old (Se funktionen i 'Person.java')");
         } else {
             // Person is null, remove all the text.
             firstNameLabel.setText("");

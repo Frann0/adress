@@ -5,6 +5,8 @@ import javafx.beans.property.*;
 
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
 
 /**
  * Model class for a Person.
@@ -132,5 +134,10 @@ public class Person {
         return SocialSecurity;
     }
 
+    public int calculateAge(){
+        LocalDate today = LocalDate.now();
+        LocalDate birthday = LocalDate.of(this.birthday.get().getYear(), Month.of(this.birthday.getValue().getMonthValue()),this.birthday.get().getDayOfMonth());
+        return Period.between(birthday,today).getYears();
+    }
 
 }
