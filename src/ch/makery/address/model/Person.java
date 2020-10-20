@@ -19,6 +19,7 @@ public class Person {
     private final IntegerProperty postalCode;
     private final StringProperty city;
     private final ObjectProperty<LocalDate> birthday;
+    private final StringProperty SocialSecurity;
 
     /**
      * Default constructor.
@@ -42,6 +43,7 @@ public class Person {
         this.postalCode = new SimpleIntegerProperty(1234);
         this.city = new SimpleStringProperty("some city");
         this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
+        this.SocialSecurity = new SimpleStringProperty("111111-1111");
     }
 
     public String getFirstName() {
@@ -115,6 +117,19 @@ public class Person {
 
     public ObjectProperty<LocalDate> birthdayProperty() {
         return birthday;
+    }
+
+    public String getSocialSecurity(){
+        return SocialSecurity.get();
+
+    }
+
+    public void setSocialSecurity(String SocialSecurity){
+        this.SocialSecurity.set(SocialSecurity);
+    }
+
+    public StringProperty socialSecurityProperty(){
+        return SocialSecurity;
     }
 
 

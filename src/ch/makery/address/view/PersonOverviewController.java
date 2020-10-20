@@ -10,6 +10,8 @@ import java.util.Optional;
 
 public class PersonOverviewController {
     @FXML
+    private Label socialSecurityLabel;
+    @FXML
     private TableView<Person> personTable;
     @FXML
     private TableColumn<Person, String> firstNameColumn;
@@ -79,6 +81,7 @@ public class PersonOverviewController {
             cityLabel.setText(person.getCity());
 
             birthdayLabel.setText(DateUtil.format(person.getBirthday()));
+            socialSecurityLabel.setText(person.getSocialSecurity());
         } else {
             // Person is null, remove all the text.
             firstNameLabel.setText("");
@@ -87,6 +90,7 @@ public class PersonOverviewController {
             postalCodeLabel.setText("");
             cityLabel.setText("");
             birthdayLabel.setText("");
+            socialSecurityLabel.setText("");
         }
     }
 

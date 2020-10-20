@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="400.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.PersonEditDialogController">
    <children>
       <GridPane layoutX="10.0" layoutY="43.0" prefHeight="246.0" prefWidth="380.0" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="43.0">
@@ -24,6 +23,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="First Name" />
@@ -38,6 +38,8 @@
             <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="birthdayField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="streetField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Social Security" GridPane.rowIndex="6" />
+            <TextField fx:id="socialSecurityField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
          </children>
       </GridPane>
       <ButtonBar layoutX="189.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0">
