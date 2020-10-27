@@ -244,10 +244,9 @@ public class MainApp extends Application {
      */
     public void savePersonDataToFile(File file) {
         try {
-            JAXBContext context = JAXBContext
-                    .newInstance(PersonListWrapper.class);
+            JAXBContext context = JAXBContext.newInstance(PersonListWrapper.class);
             Marshaller m = context.createMarshaller();
-            ((Marshaller) m).setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
             // Wrapping our person data.
             PersonListWrapper wrapper = new PersonListWrapper();
